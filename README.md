@@ -9,7 +9,7 @@ Starting the test/demo server:
 1. Run `mvn jetty:run`.
 2. Open http://localhost:8080 in the browser.
 
-## Usage
+## Usage in Vaadin Application Project
 
 1. Clone the project locally
 2. Run `mvn install` to get the artifact to your local Maven repository
@@ -41,5 +41,7 @@ And switch the first `module.rules` to
 ```
 5. Copy the `webpack.config.js` file from this project to the application project.
 It is needed for making sure Oracle Jet frontend sources are imported properly and modified a bit. 
+6. Copy the folder `plugins` from this project to the application project.
+
 
 ### Patches Welcome
