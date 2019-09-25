@@ -1,7 +1,9 @@
 package org.jetflow.button;
 
+import com.vaadin.flow.component.ClickEvent;
 import com.vaadin.flow.component.ClickNotifier;
 import com.vaadin.flow.component.Component;
+import com.vaadin.flow.component.ComponentEventListener;
 import com.vaadin.flow.component.HasSize;
 import com.vaadin.flow.component.HasStyle;
 import com.vaadin.flow.component.HasText;
@@ -15,7 +17,7 @@ import org.jetflow.HasChroming;
 @JsModule("@oracle/oraclejet/dist/js/libs/oj/debug/ojbutton.js")
 @JsModule("knockout/build/output/knockout-latest.debug.js")
 @CssImport("@oracle/oraclejet/dist/css/alta/oj-alta-min.css")
-@NpmPackage(value = "@oracle/oraclejet", version = "^7.1.0")
+@NpmPackage(value = "@oracle/oraclejet", version = "7.2.0")
 public class OJButton extends Component implements HasSize, HasStyle, HasText, HasChroming, ClickNotifier<OJButton> {
 
     public OJButton() {
@@ -26,6 +28,11 @@ public class OJButton extends Component implements HasSize, HasStyle, HasText, H
     public OJButton(String text) {
         this();
         setText(text);
+    }
+
+    public OJButton(String text, ComponentEventListener<ClickEvent<OJButton>> listener) {
+        this(text);
+        addClickListener(listener);
     }
 
 
