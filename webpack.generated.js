@@ -6,7 +6,7 @@
  */
 const fs = require('fs');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const {BabelMultiTargetPlugin} = require('webpack-babel-multi-target-plugin');
+//const {BabelMultiTargetPlugin} = require('webpack-babel-multi-target-plugin');
 
 const path = require('path');
 const baseDir = path.resolve(__dirname);
@@ -80,7 +80,7 @@ module.exports = {
     rules: [
       { // Files that Babel has to transpile
         test: /\.js$/,
-        use: [BabelMultiTargetPlugin.loader()]
+        use: 'babel-loader'
       },
       {
         test: /\.css$/i,
@@ -94,6 +94,7 @@ module.exports = {
   },
   plugins: [
     // Transpile with babel, and produce different bundles per browser
+      /*
     new BabelMultiTargetPlugin({
       babel: {
         presetOptions: {
@@ -116,7 +117,7 @@ module.exports = {
           tagAssetsWithKey: true, // append a suffix to the file name
         }
       }
-    }),
+    }),*/
 
     // Generates the stats file for flow `@Id` binding.
     function (compiler) {

@@ -1,4 +1,4 @@
-package org.vaadin.pekka;
+package org.jetflow;
 
 import org.junit.Before;
 import org.junit.Rule;
