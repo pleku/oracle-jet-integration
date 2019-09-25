@@ -26,7 +26,6 @@ Starting the test/demo server:
 ```json
  plugins: [
     // Transpile with babel, and produce different bundles per browser
-      /*
     new BabelMultiTargetPlugin({
      ...
     }),
