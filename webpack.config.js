@@ -4,6 +4,13 @@ const merge = require('webpack-merge');
 const flowDefaults = require('./webpack.generated.js');
 
 const WebpackRequireFixupPlugin = require('./plugins/WebpackRequireFixupPlugin');
+flowDefaults.plugins.push(new webpack.LoaderOptionsPlugin({
+  options: {
+    ojL10nLoader: {
+      locale: "en-US"
+    }
+  }
+}));
 flowDefaults.plugins.push(new WebpackRequireFixupPlugin(
     {
       // Point this setting to the root folder for the associated JET distribution (could be a CDN). Used by the oj.Config.getResourceUri() call

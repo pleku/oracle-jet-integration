@@ -1,4 +1,4 @@
-# Oracle Jet web component integrations for Vaadin
+# Oracle JET web component integrations for Vaadin
 
 List of components:
 - OjButton
@@ -40,8 +40,8 @@ And switch the first `module.rules` to
       },
 ```
 5. Copy the `webpack.config.js` file from this project to the application project.
-It is needed for making sure Oracle Jet frontend sources are imported properly and modified a bit. 
+It is needed for making sure Oracle JET frontend sources are imported properly and modified a bit. 
 6. Copy the folder `plugins` from this project to the application project.
-
+7. Copy the folder `loaders` from this project to the application project.
 
 ### Patches Welcome

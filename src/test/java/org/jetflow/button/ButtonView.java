@@ -13,7 +13,7 @@ public class ButtonView extends Div {
     private int count;
 
     public ButtonView() {
-        OJButton ojButton = new OJButton("Oracle Jet Button");
+        OJButton ojButton = new OJButton("Oracle JET Button");
         add(ojButton);
 
         ojButton.addClickListener(event -> Notification.show("Clicked " + count++ + " times."));
